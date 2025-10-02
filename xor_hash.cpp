@@ -15,7 +15,7 @@ auto random_address = []
 const uint64_t SEED = chrono::steady_clock::now().time_since_epoch().count() * (random_address() | 1);
 mt19937_64 rng(SEED);
 
-static inline ll xor_hash(ll x)
+static inline unsigned ll xor_hash(ll x)
 {
     return rng();
 }
@@ -44,3 +44,4 @@ int main()
         }
     }
 }
+
